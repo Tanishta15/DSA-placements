@@ -3,8 +3,9 @@ class Solution {
         int low =0; int high = nums.length-1;
         while (low<=high){
             int mid = low+ (high-low)/2;
-            if(nums[mid]==k) return mid;
-            else if(nums[low]<=nums[mid]){
+            if(nums[mid]==k) //mid remains same after rotation
+            return mid;
+            else if(nums[low]<=nums[mid]){//search between low and mid
                 if(k>=nums[low]&&k<=nums[mid]){
                     high = mid-1;
                 }
@@ -12,7 +13,7 @@ class Solution {
                     low = mid+1;
                 }
             }
-            else{
+            else{//search between mid and high
                 if(k>=nums[mid] && k<=nums[high]){
                     low = mid+1;
                 }

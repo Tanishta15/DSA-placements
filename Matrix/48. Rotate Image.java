@@ -2,14 +2,14 @@ class Solution {
     public void rotate(int[][] matrix) {
         int n = matrix.length;
         for(int i=0;i<n;i++){
-        for(int j=i;j<n;j++){
+        for(int j=i;j<n;j++){//swapping every diagnol
             int temp = matrix[i][j];
             matrix[i][j] = matrix[j][i];
             matrix[j][i] = temp;
             }
             }
         for(int i=0;i<n;i++){
-        for(int j=0;j<n/2;j++){
+        for(int j=0;j<n/2;j++){//swap exact half, mirror image
             int temp = matrix[i][j];
             matrix[i][j] = matrix[i][n-j-1];
             matrix[i][n-j-1] = temp;

@@ -4,7 +4,7 @@ class Solution {
     public int maxSubArray(int[] nums) {
         int maxSum = nums[0];
         int currentSum = nums[0];
-        for (int i = 1; i < nums.length; i++) {
+        for (int i = 1; i < nums.length; i++) {//start from 1 and move forward
             currentSum = Math.max(nums[i], currentSum + nums[i]);
             maxSum = Math.max(maxSum, currentSum);
             }
@@ -16,18 +16,18 @@ class Solution {
 import java.util.Arrays;
 
 class Solution {
-    public int MaximalRectangle(int C, int R, int[][] matrix) {
-        int sum[] = new int[R];//row 1d arr
-        int maxSum = Integer.MIN_VALUE;//taking smallest value as can contain -ve
-        for(int cStart=0;cStart<C;cStart++){//starting col
-            Arrays.fill(sum, 0);//fill sum arr with 0
-        for(int cEnd=cStart;cEnd<C;cEnd++){//start from cStart and end at last col needed
-            for(int r=0;r<R;r++){
-                sum[r] += matrix[r][cEnd];//adding cur col to sum arr
-            }
-            int curMaxSum=kadane(sum);
-            maxSum=Math.max(maxSum,curMaxSum);
+public int MaximalRectangle(int C, int R, int[][] matrix) {
+    int sum[] = new int[R];//row 1d arr
+    int maxSum = Integer.MIN_VALUE;//taking smallest value as can contain -ve
+    for(int cStart=0;cStart<C;cStart++){//starting col
+        Arrays.fill(sum, 0);//fill sum arr with 0
+    for(int cEnd=cStart;cEnd<C;cEnd++){//start from cStart and end at last col needed
+        for(int r=0;r<R;r++){
+            sum[r] += matrix[r][cEnd];//adding cur col to sum arr
         }
+        int curMaxSum=kadane(sum);
+        maxSum=Math.max(maxSum,curMaxSum);
+    }
     }
         return maxSum;
 }

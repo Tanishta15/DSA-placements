@@ -1,5 +1,6 @@
 class Solution {
     public int numPairsDivisibleBy60(int[] time) {
+        //similar to subarray divisible by k
         int[] count = new int[60];
         int res = 0;
         for (int t : time) {

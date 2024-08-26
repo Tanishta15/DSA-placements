@@ -6,8 +6,8 @@ class Solution {
         while (left < right) {
             int h = Math.min(height[left], height[right]);
             int w = right - left;
-            int area = h * w;
-            max = Math.max(max, area);
+            int area = h * w;//rectangle area
+            max = Math.max(max, area);//update max area
             if (height[left] < height[right]) {
                 left++;
                 } else {

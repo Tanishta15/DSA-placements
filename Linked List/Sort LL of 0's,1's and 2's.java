@@ -1,26 +1,23 @@
-/*
- class Node {
-    int data;
-    Node next;
+class ListNode {
+    int val;
+    ListNode next;
 
-    Node(int new_data) {
-        data = new_data;
-        next = null;
+    ListNode(int val) {
+        this.val = val;
     }
 }
-
-public class GFG {
-    public static void sortList(Node head) {
+class GFG {
+    public static void sortList(ListNode head) {
       
         int[] cnt = { 0, 0, 0 };
-        Node ptr = head;
+        ListNode ptr = head;
 
         // Traverse and count total number of '0', '1' and '2'
         // cnt[0] will store total number of '0's
         // cnt[1] will store total number of '1's
         // cnt[2] will store total number of '2's
         while (ptr != null) {
-            cnt[ptr.data] += 1;
+            cnt[ptr.val] += 1;
             ptr = ptr.next;
         }
 
@@ -34,10 +31,10 @@ public class GFG {
             if (cnt[idx] == 0)
                 idx += 1;
             else {
-                ptr.data = idx;
+                ptr.val = idx;
                 cnt[idx] -= 1;
                 ptr = ptr.next;
             }
         }
     }
- */
+}

@@ -5,8 +5,8 @@ class Solution {
             String res = "";
             for (int i = 0; i < values.length; i++) {
             while (num >= values[i]) {
-                res += roman[i];
-                num -= values[i];
+                res += roman[i];//go down the arr
+                num -= values[i];//check if smaller than next number too
                 }
                 }
             return res;

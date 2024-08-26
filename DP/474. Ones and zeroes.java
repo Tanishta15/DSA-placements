@@ -11,7 +11,7 @@ class Solution {
                 }
         // loop runs till condition is not satisfied
         for (int i = m; i >= zeros; i--) {
-            for (int j = n; j >= ones; j--) {
+            for (int j = n; j >= ones; j--) {//decrease number needed as it is found
                 dp[i][j] = Math.max(dp[i][j], dp[i - zeros][j- ones] + 1);
                 }
                 }

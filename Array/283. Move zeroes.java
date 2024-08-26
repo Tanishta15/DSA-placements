@@ -5,9 +5,9 @@ class Solution {
     while (i < nums.length) {
     if (nums[i] != 0) {
     nums[j] = nums[i];
-    j++;
+    j++;//if zero then move in j
     }
-    i++;
+    i++;//else move in i
     }
     for (int k = j; k < nums.length; k++) {
         nums[k] = 0;

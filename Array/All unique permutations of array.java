@@ -6,8 +6,7 @@ class Solution {
         permute(arr, 0, n - 1, ans);
         return ans;
         }
-        static void permute(ArrayList<Integer> arr, int l, int r, ArrayList<ArrayList<Integer>>
-        ans) {
+        static void permute(ArrayList<Integer> arr, int l, int r, ArrayList<ArrayList<Integer>>ans) {
             if (l == r) {
                 ans.add(new ArrayList<>(arr));
                 } else {
@@ -19,6 +18,7 @@ class Solution {
                         }
                         }
                         static void swap(ArrayList<Integer> arr, int i, int j) {
+                            //swapping in Arraylist style
                             int temp = arr.get(i);
                             arr.set(i, arr.get(j));
                             arr.set(j, temp);

@@ -1,16 +1,14 @@
 import java.util.Arrays;
 
-class Solution
-{
-    static int missingNumber(int arr[], int size)
-    {
+class Solution{
+    static int missingNumber(int arr[], int size){
         Arrays.sort(arr);
         int ans=1;
         for(int i=0;i<size;i++){
             if(arr[i] >= 0){
                 if(arr[i] > ans){
                     return ans;
-                }else if(arr[i] == ans){
+                }else if(arr[i] == ans){//if exists move forward
                     ans ++;
                 }else if(arr[i] < ans){
                     continue;

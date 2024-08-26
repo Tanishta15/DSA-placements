@@ -1,4 +1,11 @@
-/* 
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int val) {
+        this.val = val;
+    }
+}
 class Solution {
     public ListNode detectCycle(ListNode head) {
         if (head == null || head.next == null) {
@@ -24,4 +31,3 @@ class Solution {
             return slow;
                 }
                 }
-                */

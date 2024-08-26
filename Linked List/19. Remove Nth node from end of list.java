@@ -1,4 +1,11 @@
-/*
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int val) {
+        this.val = val;
+    }
+}
  class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode ptr = new ListNode(0);
@@ -16,4 +23,3 @@
                 return ptr.next;
     }
 }
- */

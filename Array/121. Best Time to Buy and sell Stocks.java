@@ -4,7 +4,7 @@ class Solution {
 for (int i = 0; i < prices.length - 1; i++) {
     for (int j = i+1; j < prices.length && j>i; j++) {
         int currentProfit = prices[j] - prices[i];
-        profit = Math.max(profit, currentProfit);
+        profit = Math.max(profit, currentProfit);// update profit
     }
 }
 return profit;
@@ -43,16 +43,16 @@ class Solution {
 // WITH TRANSACTION FEE
 class Solution {
     public int maxProfit(int[] prices, int fee) {
-        int buy = -prices[0];
-        int sell = 0;
+        int buy = -prices[0];// if we buy the stock on the first day, our profit is negative
+        int sell = 0;// starts with 0 because if we haven't made any transactions, our profit is 0
         for (int i = 1; i < prices.length; i++) {
-            int newBuy = Math.max(buy, sell - prices[i]);
+            int newBuy = Math.max(buy, sell - prices[i]);//profit if we decide to buy on day i
             int newSell = Math.max(sell, buy + prices[i] - fee);
+            //maximum profit between holding the stock we already have or buying a new one on day i
             buy = newBuy;
             sell = newSell;
             }
             return sell;
-        
     }
 }
     */

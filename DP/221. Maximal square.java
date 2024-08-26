@@ -14,7 +14,7 @@ class Solution {
             dp[i][j] = matrix[i][j] - '0';
             } 
         else {//min of all 3 other sides
-            dp[i][j] = Math.min(Math.min(dp[i-1][j], dp[i][j-1]), dp[i-1][j-1]) + 1;
+            dp[i][j] = Math.min(Math.min(dp[i-1][j], dp[i][j-1]), dp[i-1][j-1]) + 1;//The +1 accounts for the current cell (i, j)
             }
             maxSide = Math.max(maxSide, dp[i][j]);
             }

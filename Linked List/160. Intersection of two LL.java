@@ -1,5 +1,12 @@
-/*
- public class Solution {
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int val) {
+        this.val = val;
+    }
+}
+class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
        ListNode pA = headA;
         ListNode pB = headB;
@@ -10,4 +17,3 @@
             return pA;    
     }
 }
- */

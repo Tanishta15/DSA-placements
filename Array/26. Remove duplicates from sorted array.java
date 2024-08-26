@@ -1,5 +1,5 @@
 class Solution {
-    public int removeDuplicates(int[] nums) {
+    public int removeDuplicates(int[] nums) { //already sorted
         int i = 0;
         for (int j = 1; j < nums.length; j++) {
             if (nums[j] != nums[i]) {

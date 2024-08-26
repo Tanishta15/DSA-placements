@@ -3,7 +3,7 @@ class Solution {
         int n = nums.length;
         long[] ans = new long[n];
    for (int i = 0; i < n; i++) {
-            ans[i] = 1;
+            ans[i] = 1;//fill ans arr with 1 as prod with 1 remains the same
         }
 
         long leftProduct = 1;

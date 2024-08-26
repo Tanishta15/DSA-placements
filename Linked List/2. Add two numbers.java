@@ -1,4 +1,11 @@
-/*
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int val) {
+        this.val = val;
+    }
+}
  class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode ptr = new ListNode(0);
@@ -10,7 +17,7 @@
             int digit2 = (l2 != null) ? l2.val : 0;
 
             int sum = digit1 + digit2 + carry;
-            int digit = sum % 10;
+            int digit = sum % 10;//if sum more than 9 then carry
             carry = sum / 10;
 
             ListNode newNode = new ListNode(digit);
@@ -26,4 +33,3 @@
         return result;
     }
 }
- */

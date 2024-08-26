@@ -1,4 +1,11 @@
-/*
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int val) {
+        this.val = val;
+    }
+}
  class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
      ListNode ptr = new ListNode(0);
@@ -23,4 +30,3 @@
             return ptr.next;     
     }
 }
- */
